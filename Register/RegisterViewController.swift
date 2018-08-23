@@ -19,6 +19,10 @@ class RegisterViewController: UIViewController {
 //    @IBOutlet weak var mAccountIcon: UIImageView!
 //    @IBOutlet weak var mBackground: UIImageView!
     
+    @IBAction func mbackButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var mNoticePassword: UILabel!
     @IBOutlet weak var mNoticeConfirmPassword: UILabel!
     @IBOutlet weak var mNoticeEmail: UILabel!
@@ -28,6 +32,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var mUsername: TweeActiveTextField!
     
     @IBOutlet weak var mPassword: TweeActiveTextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +59,12 @@ class RegisterViewController: UIViewController {
         }
         if mEmail.text == "" {
             mNoticeEmail.text = "Nhập Email"
-        } else  if mPassword.text != mConfirmPassword.text {
+        } else if ((mUsername.text?.count)! < 6  ) {
+            mNoticeUser.text = "User phải có tối thiểu 6 kí tự"
+        } else if ((mPassword.text?.count)! < 8) {
+        mNoticePassword.text = "Password phải có tối thiểu 8 ký tự"
+        }
+        else  if mPassword.text != mConfirmPassword.text {
             mNoticeConfirmPassword.text = "Mật khẩu không khớp"
         } else {
         

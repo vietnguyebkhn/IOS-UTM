@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JsonOffTableViewCell" customModule="Login" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="JsonOffTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="129" id="KGk-i7-Jjw" customClass="JsonOffTableViewCell" customModule="Login" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="129"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="JsonOffTableViewCell" customModule="Login" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="394" height="128.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZF-7O-FNr">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="128.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKv-7F-ODX">
+                                <rect key="frame" x="8" y="8" width="378" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6SO-D2-0sK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1Q-i8-spm">
+                                <rect key="frame" x="8" y="37" width="378" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="kXm-iL-QQf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fKv-7F-ODX" firstAttribute="leading" secondItem="uZF-7O-FNr" secondAttribute="leading" constant="8" id="9ru-s2-1wy"/>
+                            <constraint firstAttribute="trailing" secondItem="E1Q-i8-spm" secondAttribute="trailing" constant="8" id="MGf-mK-eZw"/>
+                            <constraint firstItem="E1Q-i8-spm" firstAttribute="top" secondItem="fKv-7F-ODX" secondAttribute="bottom" constant="8" id="Qtm-W3-XTY"/>
+                            <constraint firstAttribute="trailing" secondItem="fKv-7F-ODX" secondAttribute="trailing" constant="8" id="gdu-2h-CrG"/>
+                            <constraint firstItem="fKv-7F-ODX" firstAttribute="top" secondItem="uZF-7O-FNr" secondAttribute="top" constant="8" id="mS8-5n-qfp"/>
+                            <constraint firstItem="E1Q-i8-spm" firstAttribute="leading" secondItem="uZF-7O-FNr" secondAttribute="leading" constant="8" id="wpy-eG-JTg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uZF-7O-FNr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8tO-YO-ohd"/>
+                    <constraint firstAttribute="trailing" secondItem="uZF-7O-FNr" secondAttribute="trailing" id="9hK-p6-zR5"/>
+                    <constraint firstItem="uZF-7O-FNr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="W3P-IV-j3g"/>
+                    <constraint firstAttribute="bottom" secondItem="uZF-7O-FNr" secondAttribute="bottom" id="blh-YF-qTY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mDetail" destination="E1Q-i8-spm" id="WUy-m1-ZQ4"/>
+                <outlet property="mTitle" destination="fKv-7F-ODX" id="cJi-fL-gX2"/>
+            </connections>
+            <point key="canvasLocation" x="38" y="64.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -25,8 +25,8 @@ class ViewController: UIViewController {
     @IBAction func mRegisterTouched(_ sender: Any) {
         let RegisterViewController: UIStoryboard = UIStoryboard(name: "Register", bundle: nil)
         let Register = RegisterViewController.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
-        present(Register, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(Register, animated: true)
+       // present(Register, animated: true, completion: nil)
+       self.navigationController?.pushViewController(Register, animated: true)
     }
     
     @IBAction func mLoginTouched(_ sender: Any) {
@@ -39,7 +39,8 @@ class ViewController: UIViewController {
         } else {
             let HomeStoryBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
             let Home = HomeStoryBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            present(Home, animated: true, completion: nil)
+            self.navigationController?.pushViewController(Home, animated: true)
+       //   present(Home, animated: true, completion: nil)
 
           //  self.navigationController?.pushViewController(Home, animated: true)
         }
@@ -76,7 +77,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          self.hideKeyboardWhenTappedAround()
-        
+        removeBorderNavigation()
         // Do any additional setup after loading the view, typically from a nib.
         backgroundPlayer = BackgroundVideo(on: self, withVideoURL: "Rain_Fire.mp4") // Passing self and video name with extension
         backgroundPlayer?.setUpBackground()
@@ -122,6 +123,11 @@ class ViewController: UIViewController {
         
         
         return bool
+    }
+    func removeBorderNavigation()
+    {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 
 }

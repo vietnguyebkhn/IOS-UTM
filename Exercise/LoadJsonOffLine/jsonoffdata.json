@@ -1,0 +1,20 @@
+{
+    "jsonoffdata": [
+    {
+                    "title": "Iphone 6",
+                    "detail": "iphone 6s"
+    },
+                    {
+                    "title": "Iphone 7",
+                    "detail": "iphone 7s"
+                    },
+                    {
+                    "title": "Iphone 8",
+                    "detail": "iphone 8s"
+                    },
+                    {
+                    "title": "Iphone X",
+                    "detail": "iphone Xs"
+                    }
+    ]
+}

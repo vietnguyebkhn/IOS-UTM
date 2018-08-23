@@ -204,6 +204,14 @@
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbX-5k-Ig5">
+                                <rect key="frame" x="136" y="534" width="102" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="mbackButton:" destination="Da9-g8-jQG" eventType="touchUpInside" id="Hqe-Xm-zRj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -239,6 +247,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a9C-QE-HJn"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ir8-c3-gDr"/>
                     <connections>
                         <outlet property="mConfirmPassword" destination="4Zc-TT-75w" id="zjp-3f-zyu"/>
                         <outlet property="mEmail" destination="603-tu-IqJ" id="GWd-EG-lxY"/>
@@ -252,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mum-Cz-CQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653.60000000000002" y="-213.64317841079463"/>
+            <point key="canvasLocation" x="1592.8" y="-213.64317841079463"/>
         </scene>
     </scenes>
 </document>

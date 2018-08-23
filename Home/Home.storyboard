@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="ASp-we-pOQ">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="Tz5-Eh-4UY" customClass="HomeViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,53 +18,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n62-XI-h0f">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1026"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGroundHome" translatesAutoresizingMaskIntoConstraints="NO" id="Z7S-FX-j3Y">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1026"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1026" id="IbQ-hp-hng"/>
-                                            <constraint firstAttribute="width" constant="375" id="f73-0d-MkX"/>
-                                        </constraints>
-                                    </imageView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5o-KJ-VSV">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="651"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="651" id="1N0-GD-lX8"/>
-                                            <constraint firstAttribute="width" constant="375" id="Cph-vt-s92"/>
-                                        </constraints>
-                                    </scrollView>
-                                </subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8uw-2i-Rib">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Z7S-FX-j3Y" secondAttribute="bottom" id="BsB-hY-kFx"/>
-                                    <constraint firstItem="Z7S-FX-j3Y" firstAttribute="top" secondItem="n62-XI-h0f" secondAttribute="top" id="CQK-lX-ByV"/>
-                                    <constraint firstAttribute="bottom" secondItem="o5o-KJ-VSV" secondAttribute="bottom" constant="375" id="GNO-YU-i5f"/>
-                                    <constraint firstItem="Z7S-FX-j3Y" firstAttribute="leading" secondItem="n62-XI-h0f" secondAttribute="leading" id="NUJ-wK-7fM"/>
-                                    <constraint firstAttribute="trailing" secondItem="o5o-KJ-VSV" secondAttribute="trailing" id="VvX-7y-T6g"/>
-                                    <constraint firstAttribute="height" constant="1026" id="bn1-A1-JVX"/>
-                                    <constraint firstItem="o5o-KJ-VSV" firstAttribute="leading" secondItem="n62-XI-h0f" secondAttribute="leading" id="pDc-SC-L9X"/>
-                                    <constraint firstAttribute="trailing" secondItem="Z7S-FX-j3Y" secondAttribute="trailing" id="qmR-BW-e9g"/>
-                                    <constraint firstItem="o5o-KJ-VSV" firstAttribute="top" secondItem="n62-XI-h0f" secondAttribute="top" id="y53-a6-UhJ"/>
-                                </constraints>
-                            </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="Tz5-Eh-4UY" id="pOf-Bp-Gso"/>
+                                    <outlet property="delegate" destination="Tz5-Eh-4UY" id="cgc-RG-mhD"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="joW-2B-UsA" firstAttribute="trailing" secondItem="n62-XI-h0f" secondAttribute="trailing" id="B9D-AL-H0S"/>
-                            <constraint firstItem="n62-XI-h0f" firstAttribute="top" secondItem="joW-2B-UsA" secondAttribute="top" id="f03-PJ-0Fe"/>
-                            <constraint firstItem="n62-XI-h0f" firstAttribute="leading" secondItem="joW-2B-UsA" secondAttribute="leading" id="khX-GG-f8A"/>
+                            <constraint firstItem="joW-2B-UsA" firstAttribute="bottom" secondItem="8uw-2i-Rib" secondAttribute="bottom" id="KdH-M0-TnX"/>
+                            <constraint firstItem="8uw-2i-Rib" firstAttribute="top" secondItem="joW-2B-UsA" secondAttribute="top" id="MFh-nN-PaI"/>
+                            <constraint firstItem="8uw-2i-Rib" firstAttribute="leading" secondItem="joW-2B-UsA" secondAttribute="leading" id="QV6-pS-gO4"/>
+                            <constraint firstItem="joW-2B-UsA" firstAttribute="trailing" secondItem="8uw-2i-Rib" secondAttribute="trailing" id="TCR-q9-eJt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="joW-2B-UsA"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Home" id="42G-OH-sjC"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mTableView" destination="8uw-2i-Rib" id="LUE-hd-3SA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkZ-lZ-KI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192.80000000000001" y="-53.523238380809602"/>
+            <point key="canvasLocation" x="3949.5999999999999" y="-53.523238380809602"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OEg-fa-hCY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="LTw-6s-Hgb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cys-Ld-wrC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tz5-Eh-4UY" kind="relationship" relationship="rootViewController" id="YHd-RX-1bX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VNH-TX-br8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2714" y="-156"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="BackGroundHome" width="288" height="512"/>
-    </resources>
 </document>
