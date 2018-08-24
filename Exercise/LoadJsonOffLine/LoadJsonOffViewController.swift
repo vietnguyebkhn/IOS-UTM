@@ -12,12 +12,19 @@ class LoadJsonOffViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var mTableView: UITableView!
     var arrData:[JsonOffVO] = []
-
+    let searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
         mTableView.register(UINib(nibName: "JsonOffTableViewCell", bundle: nil), forCellReuseIdentifier: "JsonOffTableViewCell")
         loadDataLocal()
         mTableView.delegate = self
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        mTableView.tableHeaderView = searchController.searchBar
+        searchController.searchBar.barTintColor = UIColor(red: 52.0/255.0, green: 200.0/255.0, blue: 114.0/255.0, alpha: 1.0)
+        searchController.searchBar.tintColor = UIColor.white
+        
         // Do any additional setup after loading the view.
     }
 
@@ -68,4 +75,14 @@ class LoadJsonOffViewController: UIViewController, UITableViewDataSource, UITabl
     }
     */
 
+    
+}
+extension LoadJsonOffViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        // To do: Implement search method
+    }
 }
