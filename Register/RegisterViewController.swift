@@ -70,23 +70,34 @@ class RegisterViewController: UIViewController {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
+            
+
         var newAccount = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context)
             
+
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Account")
+            
         request.returnsObjectsAsFaults = false
+            
+//            print(request.value(forKey: "username"))
+//            print(request.value(forKey: "email"))
+//            print(request.value(forKey: "password"))
         do {
             let results = try context.fetch(request)
             if results.count > 0 {
             for result in results as! [NSManagedObject] {
                 if  let username = result.value(forKey: "username") as? String,
-                    let email = result.value(forKey: "email") as? String {
+                    let email = result.value(forKey: "email") as? String,
+                let password = result.value(forKey: "password") as? String{
+                    print(username)
+                    print(email)
+                    print(password)
                     
                    if (mUsername.text == username ) {
                         mNoticeUser.text = "Tài khoản đã tồn tại"
                     } else if (mEmail.text == email) {
                         mNoticeEmail.text = "Email đã tồn tại"
-                   }
-                   else {
+                   } else {
                     
                     newAccount.setValue(mUsername.text, forKey: "username")
                     newAccount.setValue(mEmail.text, forKey: "email")

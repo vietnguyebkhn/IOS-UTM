@@ -108,9 +108,9 @@ class ViewController: UIViewController {
                     if  let username = result.value(forKey: "username") as? String,
                         let password = result.value(forKey: "password") as? String{
                         if (username == userName && password == passWord ) {
-                            bool = true
+                            return true
                         } else {
-                            bool = false
+                            continue
                         }
                         
                     }
@@ -122,7 +122,7 @@ class ViewController: UIViewController {
         }
         
         
-        return bool
+        return false
     }
     func removeBorderNavigation()
     {

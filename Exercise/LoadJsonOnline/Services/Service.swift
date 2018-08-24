@@ -10,10 +10,10 @@ import Foundation
 import Alamofire
 
 class Service {
-    let baseAPI = "https://jsonplaceholder.typicode.com/"
-    var comment = "comments"
+    static  let baseAPI = "https://jsonplaceholder.typicode.com/"
+    static var comment = "comments"
     
-    func requestComment(complete: @escaping(_ error: Error?, _ resData: ListCommentVO?) -> Void ) {
+   static func requestComment(complete: @escaping(_ error: Error?, _ resData: ListCommentVO?) -> Void ) {
         var requestURL = baseAPI + comment
         Alamofire.request(requestURL, method: .get, parameters: nil).responseJSON { (response) in
             switch response.result {

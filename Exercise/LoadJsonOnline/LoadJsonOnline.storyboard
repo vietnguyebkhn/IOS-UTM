@@ -13,7 +13,7 @@
         <!--Comment View Controller-->
         <scene sceneID="aYK-uM-5hO">
             <objects>
-                <viewController id="zIZ-BL-RHO" customClass="CommentViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadJsonOnline" id="zIZ-BL-RHO" customClass="CommentViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zft-hL-u4C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

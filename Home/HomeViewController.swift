@@ -71,6 +71,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let ChangeDynamicSB = DynamicSB.instantiateViewController(withIdentifier: "LoadJsonOffline")
                     // print("navigation = \(self.navigationController)")
                     self.navigationController?.pushViewController(ChangeDynamicSB, animated: true)
+                } else if (indexPath.row == 3) {
+                    let DynamicSB = UIStoryboard(name: "LoadJsonOnline", bundle: nil)
+                    let ChangeDynamicSB = DynamicSB.instantiateViewController(withIdentifier: "LoadJsonOnline")
+                    // print("navigation = \(self.navigationController)")
+                    self.navigationController?.pushViewController(ChangeDynamicSB, animated: true)
         }
     }
     override func didReceiveMemoryWarning() {

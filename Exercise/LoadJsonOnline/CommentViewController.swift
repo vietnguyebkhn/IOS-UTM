@@ -27,22 +27,35 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func requestComment() {
-        Service.requestComment() {[weak self](error,dataResponse) in
+        Service.requestComment() {[weak self] (error, dataResponse) in
             guard let strongSelf = self else {
-                
+                return
             }
-            
+            if error != nil {
+                let alert = UIAlertController(title: "Thong Bao", message: error?.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+                    
+                }))
+            } else {
+                strongSelf.commentList = dataResponse
+                strongSelf.mTableView.reloadData()
+            }
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 mTableView.register(UINib(nibName: "CommentTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentTableViewCell")
+        requestComment()
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        requestComment()
     }
     
 

@@ -23,8 +23,12 @@ class CommentTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func setData(data: [String: AnyObject]) {
-        
+    func setData(data: CommentVO) {
+        mPostId.text = String(data.postId)
+        mId.text = String(data.id)
+        mName.text = data.name
+        mEmail.text = data.email
+        mBody.text = data.body
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
